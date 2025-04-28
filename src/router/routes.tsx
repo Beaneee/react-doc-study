@@ -4,12 +4,18 @@ import {
   RouteObject,
 } from "react-router-dom";
 import App from "@/App.tsx";
+import TicTacToe from "@/pages/TicTacToe.tsx";
 
 const routes: RouteObject[] = [
   {
     path: "/",
     element: <App />,
-    children: [],
+    children: [
+      {
+        path: '/tic-tac-toe',
+        element: <TicTacToe />
+      }
+    ],
   },
 ];
 
