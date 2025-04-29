@@ -1,10 +1,10 @@
-import Board from "@/components/Board.tsx";
+import Game from "@/components/Game.tsx";
 
 const TicTacToe = () => {
 
   return (
     <>
-      <Board />
+      <Game />
     </>
   )
 }
