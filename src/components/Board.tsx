@@ -2,19 +2,26 @@ import Square from "@/components/Square.tsx";
 import {useState} from "react";
 
 export default function Board() {
+  const [xIsNext, setXIsNext] = useState(true);
   const [squares, setSquares] = useState(Array(9).fill(null));
 
   function handleClick(i) {
+    if (squares[i]) {
+      return;
+    }
     const nextSquares = squares.slice();
-    nextSquares[i] = "X";
+    if (xIsNext) {
+      nextSquares[i] = 'X';
+    } else {
+      nextSquares[i] = 'O';
+    }
     setSquares(nextSquares);
+    setXIsNext(!xIsNext);
   }
 
   return (
     <>
       <div className="board-row">
-        {/*React에서는 주로 이벤트를 나타내는 prop에는 onSomething과 같은 이름을 사용하고, */}
-        {/*이벤트를 처리하는 함수를 정의 할 때는 handleSomething과 같은 이름을 사용합니다.*/}
         <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
         <Square value={squares[1]} onSquareClick={() => handleClick(1)} />
         <Square value={squares[2]} onSquareClick={() => handleClick(2)} />
