@@ -5,6 +5,8 @@ import {
 } from "react-router-dom";
 import App from "@/App.tsx";
 import TicTacToe from "@/pages/TicTacToe.tsx";
+import RenderUI from "@/pages/render-ui/RenderUI.tsx";
+import FirstComponent from "@/pages/render-ui/FirstComponent.tsx";
 
 const routes: RouteObject[] = [
   {
@@ -17,7 +19,13 @@ const routes: RouteObject[] = [
       },
       {
         path: '/render-ui',
-        element: <TicTacToe />
+        element: <RenderUI />,
+        children: [
+          {
+            path: 'first-component',
+            element: <FirstComponent />
+          }
+        ]
       },
     ],
   },
