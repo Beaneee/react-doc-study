@@ -14,7 +14,11 @@ const routes: RouteObject[] = [
       {
         path: '/tic-tac-toe',
         element: <TicTacToe />
-      }
+      },
+      {
+        path: '/render-ui',
+        element: <TicTacToe />
+      },
     ],
   },
 ];

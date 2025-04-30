@@ -1,4 +1,4 @@
-import Board from "@/components/Board.tsx";
+import Board from "@/components/tic-tac-toe/Board.tsx";
 import {useState} from "react";
 
 export default function Game() {

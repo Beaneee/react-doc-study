@@ -1,4 +1,4 @@
-import Game from "@/components/Game.tsx";
+import Game from "@/components/tic-tac-toe/Game.tsx";
 
 const TicTacToe = () => {
 

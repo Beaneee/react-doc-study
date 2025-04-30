@@ -1,4 +1,4 @@
-import Square from "@/components/Square.tsx";
+import Square from "@/components/tic-tac-toe/Square.tsx";
 
 export default function Board({ xIsNext, squares, onPlay }) {
 
